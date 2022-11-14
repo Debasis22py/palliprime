@@ -1,0 +1,27 @@
+def isprime(n):
+    if n>1:
+        for i in range (2,n//2+1):
+
+            if n%i==0:
+                return False
+        else:
+            return True
+
+    else:
+        return False
+
+def ispalindrome(n):
+    s=str(n)
+    if s==s[::-1]:
+        return True
+    else:
+        return False
+
+def palipalindrome(ll,ul):
+    for j in range(ll,ul+1):
+        if isprime(j) and ispalindrome(j):
+            print(j)
+
+palipalindrome(10,32)  
+
+# checking paliprime no in a given range by using function
